@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMÉA BEAUTY — Glow With Confidence</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>FREE SHIPPING ON ORDERS OVER ₱1,500 • YOUR BEAUTY, YOUR GLOW</p>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-container">
+      <button class="mobile-toggle-btn" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="#home" class="logo">
+        <span class="logo-title">LUMÉA</span>
+        <span class="logo-sub">BEAUTY & SKINCARE</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#categories" class="nav-link">Skincare</a>
+        <a href="#routine" class="nav-link">Routine</a>
+        <a href="#quiz" class="nav-link">Beauty Quiz</a>
+        <a href="#best-sellers" class="nav-link">Best Sellers</a>
+        <a href="#notes" class="nav-link">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="searchTriggerBtn" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-btn" id="wishlistDrawerTriggerBtn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge" id="wishlistCount">0</span>
+        </button>
+        <button class="icon-btn" id="cartDrawerTriggerBtn" aria-label="Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Side Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <span class="logo-title">LUMÉA</span>
+        <span class="logo-sub">BEAUTY & SKINCARE</span>
+      </div>
+      <button class="close-btn" id="mobileMenuCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-menu-list">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#shop" class="mobile-nav-link">Shop All Products</a></li>
+      <li><a href="#categories" class="mobile-nav-link">Categories</a></li>
+      <li><a href="#routine" class="mobile-nav-link">Skincare Routine</a></li>
+      <li><a href="#bundles" class="mobile-nav-link">Beauty Bundles</a></li>
+      <li><a href="#quiz" class="mobile-nav-link">Skin Quiz</a></li>
+      <li><a href="#notes" class="mobile-nav-link">Beauty Notes</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <p>"Glow With Confidence."</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Search Modal Bar Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="globalSearchInput" placeholder="Search by product, category, skin type, ingredient..." />
+        <button class="close-btn" id="closeSearchBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="quick-tags">
+        <span>Popular:</span>
+        <button class="tag-btn" onclick="quickSearch('Serum')">Serums</button>
+        <button class="tag-btn" onclick="quickSearch('Vitamin C')">Vitamin C</button>
+        <button class="tag-btn" onclick="quickSearch('Sunscreen')">Sunscreen</button>
+        <button class="tag-btn" onclick="quickSearch('Dryness')">Dryness</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-tagline">SKINCARE • BEAUTY • SELF-CARE</span>
+          <h1 class="hero-title">Your Skin Deserves To Glow</h1>
+          <p class="hero-desc">Discover carefully curated beauty and skincare essentials designed to help you feel confident in your own skin.</p>
+          <div class="hero-actions">
+            <a href="#shop" class="btn btn-primary">SHOP SKINCARE</a>
+            <a href="#best-sellers" class="btn btn-secondary">EXPLORE BEST SELLERS</a>
+          </div>
+          <ul class="hero-highlights">
+            <li><i class="fa-solid fa-check"></i> Carefully Curated Products</li>
+            <li><i class="fa-solid fa-check"></i> Beauty Essentials</li>
+            <li><i class="fa-solid fa-check"></i> Fast Delivery</li>
+          </ul>
+        </div>
+        <div class="hero-media">
+          <div class="hero-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=80" alt="Lumea Skincare Essentials" class="hero-img" />
+            
+            <!-- Floating Cards -->
+            <div class="floating-badge badge-top">
+              <span class="badge-label">BEST SELLER</span>
+              <span class="badge-title">Vitamin C Serum</span>
+            </div>
+            <div class="floating-badge badge-bottom">
+              <div class="badge-stars"><i class="fa-solid fa-star"></i> 4.9</div>
+              <span class="badge-price">₱899</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <section class="trust-section">
+      <div class="container trust-grid">
+        <div class="trust-card">
+          <i class="fa-solid fa-sparkles trust-icon"></i>
+          <h3>CAREFULLY CURATED</h3>
+          <p>Beauty products selected with care and dermatologically backed ingredients.</p>
+        </div>
+        <div class="trust-card">
+          <i class="fa-solid fa-gift trust-icon"></i>
+          <h3>BEAUTY ESSENTIALS</h3>
+          <p>Everything you need for your morning & night routines in one place.</p>
+        </div>
+        <div class="trust-card">
+          <i class="fa-solid fa-truck-fast trust-icon"></i>
+          <h3>FAST DELIVERY</h3>
+          <p>Get your beauty favorites delivered quickly straight to your doorstep.</p>
+        </div>
+        <div class="trust-card">
+          <i class="fa-solid fa-shield-halved trust-icon"></i>
+          <h3>SECURE CHECKOUT</h3>
+          <p>Safe, seamless, and convenient frontend shopping experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">SHOP BY CATEGORY</h2>
+          <p class="section-subtitle">Everything you need for your everyday beauty routine.</p>
+        </div>
+        <div class="category-grid" id="categoryGrid">
+          <!-- Dynamically populated or static markup -->
+          <div class="category-card" onclick="filterByCategory('Cleansers')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1556228722-d119f829c33b?auto=format&fit=crop&w=600&q=80" alt="Cleansers">
+            </div>
+            <div class="cat-content">
+              <h3>CLEANSERS</h3>
+              <p>Gentle purifiers for fresh skin</p>
+              <span class="cat-link">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="filterByCategory('Serums')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80" alt="Serums">
+            </div>
+            <div class="cat-content">
+              <h3>SERUMS</h3>
+              <p>Targeted potent treatments</p>
+              <span class="cat-link">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="filterByCategory('Moisturizers')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80" alt="Moisturizers">
+            </div>
+            <div class="cat-content">
+              <h3>MOISTURIZERS</h3>
+              <p>Deep barrier hydration</p>
+              <span class="cat-link">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="filterByCategory('Sunscreens')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80" alt="Sunscreen">
+            </div>
+            <div class="cat-content">
+              <h3>SUNSCREEN</h3>
+              <p>Essential UV protection</p>
+              <span class="cat-link">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="filterByCategory('Face Masks')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1567928269937-ae146e45b428?auto=format&fit=crop&w=600&q=80" alt="Face Masks">
+            </div>
+            <div class="cat-content">
+              <h3>FACE MASKS</h3>
+              <p>Pampering spa treatments</p>
+              <span class="cat-link">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="filterByCategory('Makeup')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Makeup">
+            </div>
+            <div class="cat-content">
+              <h3>MAKEUP</h3>
+              <p>Enhance your natural beauty</p>
+              <span class="cat-link">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="filterByCategory('Body Care')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1608248597261-833244679261?auto=format&fit=crop&w=600&q=80" alt="Body Care">
+            </div>
+            <div class="cat-content">
+              <h3>BODY CARE</h3>
+              <p>Head-to-toe nourishment</p>
+              <span class="cat-link">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="filterByCategory('Hair Care')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=600&q=80" alt="Hair Care">
+            </div>
+            <div class="cat-content">
+              <h3>HAIR CARE</h3>
+              <p>Silky, healthy tresses</p>
+              <span class="cat-link">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKINCARE ROUTINE SECTION -->
+    <section class="routine-section" id="routine">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">BUILD YOUR SKINCARE ROUTINE</h2>
+          <p class="section-subtitle">4 effortless steps to balanced, luminous skin every day.</p>
+        </div>
+        <div class="routine-steps-grid">
+          <div class="step-card">
+            <span class="step-num">01</span>
+            <h3>CLEANSE</h3>
+            <p>Remove dirt, oil, and impurities without stripping natural humidity.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">02</span>
+            <h3>TREAT</h3>
+            <p>Target specific skin concerns with concentrated serums and antioxidants.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">03</span>
+            <h3>HYDRATE</h3>
+            <p>Lock in moisture and repair skin barrier for plush, soft texture.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">04</span>
+            <h3>PROTECT</h3>
+            <p>Finish with essential broad-spectrum daily SPF to prevent sun damage.</p>
+          </div>
+        </div>
+        <div class="routine-action">
+          <a href="#quiz" class="btn btn-primary">BUILD MY ROUTINE</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEST SELLERS -->
+    <section class="bestsellers-section" id="best-sellers">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">BEST SELLERS</h2>
+          <p class="section-subtitle">Glow-up essentials loved by our community.</p>
+        </div>
+        <div class="product-grid" id="bestSellersGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMOTIONAL BANNER -->
+    <section class="promo-banner">
+      <div class="container promo-container">
+        <div class="promo-content">
+          <span class="promo-tag">SPECIAL GLOW OFFER</span>
+          <h2>YOUR GLOW STARTS HERE</h2>
+          <p>Get 10% OFF your first beauty order. Use code <strong>LUMEA10</strong> at checkout.</p>
+          <a href="#shop" class="btn btn-dark">SHOP NOW</a>
+        </div>
+        <div class="promo-img-box">
+          <img src="https://images.unsplash.com/photo-1512290900673-70020120536d?auto=format&fit=crop&w=800&q=80" alt="Lumea Promotion">
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN PRODUCT SHOP SEARCH & FILTERS -->
+    <section class="shop-section" id="shop">
+      <div class="container">
+        <div class="shop-header-wrapper">
+          <div>
+            <h2 class="section-title">EXPLORE ALL PRODUCTS</h2>
+            <p class="product-count-text" id="productCountText">Showing 52 Products</p>
+          </div>
+          <div class="shop-controls">
+            <button class="btn btn-outline filter-toggle-btn" id="openMobileFilterBtn">
+              <i class="fa-solid fa-filter"></i> Filters
+            </button>
+            <div class="sort-wrapper">
+              <label for="sortSelect">SORT BY:</label>
+              <select id="sortSelect" onchange="handleSortChange()">
+                <option value="featured">Featured</option>
+                <option value="bestselling">Best Selling</option>
+                <option value="newest">Newest</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-layout">
+          <!-- SIDEBAR FILTERS -->
+          <aside class="filter-sidebar" id="filterSidebar">
+            <div class="filter-sidebar-header">
+              <h3>Filters</h3>
+              <button class="close-btn" id="closeFilterBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-group">
+              <h4 class="filter-title">Category</h4>
+              <ul class="filter-list" id="categoryFilterList">
+                <li><label><input type="radio" name="category" value="All" checked onchange="applyFilters()"> All Categories</label></li>
+                <li><label><input type="radio" name="category" value="Cleansers" onchange="applyFilters()"> Cleansers</label></li>
+                <li><label><input type="radio" name="category" value="Toners" onchange="applyFilters()"> Toners</label></li>
+                <li><label><input type="radio" name="category" value="Serums" onchange="applyFilters()"> Serums</label></li>
+                <li><label><input type="radio" name="category" value="Moisturizers" onchange="applyFilters()"> Moisturizers</label></li>
+                <li><label><input type="radio" name="category" value="Sunscreens" onchange="applyFilters()"> Sunscreens</label></li>
+                <li><label><input type="radio" name="category" value="Face Masks" onchange="applyFilters()"> Face Masks</label></li>
+                <li><label><input type="radio" name="category" value="Eye Care" onchange="applyFilters()"> Eye Care</label></li>
+                <li><label><input type="radio" name="category" value="Lip Care" onchange="applyFilters()"> Lip Care</label></li>
+                <li><label><input type="radio" name="category" value="Makeup" onchange="applyFilters()"> Makeup</label></li>
+                <li><label><input type="radio" name="category" value="Body Care" onchange="applyFilters()"> Body Care</label></li>
+                <li><label><input type="radio" name="category" value="Hair Care" onchange="applyFilters()"> Hair Care</label></li>
+                <li><label><input type="radio" name="category" value="Beauty Tools" onchange="applyFilters()"> Beauty Tools</label></li>
+                <li><label><input type="radio" name="category" value="Gift Sets" onchange="applyFilters()"> Gift Sets</label></li>
+              </ul>
+            </div>
+
+            <!-- Skin Type Filter -->
+            <div class="filter-group">
+              <h4 class="filter-title">Skin Type</h4>
+              <ul class="filter-list">
+                <li><label><input type="checkbox" value="Normal" class="skintype-filter" onchange="applyFilters()"> Normal</label></li>
+                <li><label><input type="checkbox" value="Dry" class="skintype-filter" onchange="applyFilters()"> Dry</label></li>
+                <li><label><input type="checkbox" value="Oily" class="skintype-filter" onchange="applyFilters()"> Oily</label></li>
+                <li><label><input type="checkbox" value="Combination" class="skintype-filter" onchange="applyFilters()"> Combination</label></li>
+                <li><label><input type="checkbox" value="Sensitive" class="skintype-filter" onchange="applyFilters()"> Sensitive</label></li>
+              </ul>
+            </div>
+
+            <!-- Skin Concern Filter -->
+            <div class="filter-group">
+              <h4 class="filter-title">Skin Concern</h4>
+              <ul class="filter-list">
+                <li><label><input type="checkbox" value="Dryness" class="concern-filter" onchange="applyFilters()"> Dryness</label></li>
+                <li><label><input type="checkbox" value="Dullness" class="concern-filter" onchange="applyFilters()"> Dullness</label></li>
+                <li><label><input type="checkbox" value="Acne-Prone" class="concern-filter" onchange="applyFilters()"> Acne-Prone</label></li>
+                <li><label><input type="checkbox" value="Uneven Tone" class="concern-filter" onchange="applyFilters()"> Uneven Tone</label></li>
+                <li><label><input type="checkbox" value="Fine Lines" class="concern-filter" onchange="applyFilters()"> Fine Lines</label></li>
+                <li><label><input type="checkbox" value="Sensitivity" class="concern-filter" onchange="applyFilters()"> Sensitivity</label></li>
+                <li><label><input type="checkbox" value="Oil Control" class="concern-filter" onchange="applyFilters()"> Oil Control</label></li>
+              </ul>
+            </div>
+
+            <!-- Price Filter -->
+            <div class="filter-group">
+              <h4 class="filter-title">Price Range</h4>
+              <ul class="filter-list">
+                <li><label><input type="radio" name="price" value="all" checked onchange="applyFilters()"> All Prices</label></li>
+                <li><label><input type="radio" name="price" value="under500" onchange="applyFilters()"> Under ₱500</label></li>
+                <li><label><input type="radio" name="price" value="500-1000" onchange="applyFilters()"> ₱500 – ₱1,000</label></li>
+                <li><label><input type="radio" name="price" value="1000-1500" onchange="applyFilters()"> ₱1,000 – ₱1,500</label></li>
+                <li><label><input type="radio" name="price" value="1500-2500" onchange="applyFilters()"> ₱1,500 – ₱2,500</label></li>
+                <li><label><input type="radio" name="price" value="above2500" onchange="applyFilters()"> Above ₱2,500</label></li>
+              </ul>
+            </div>
+
+            <!-- Reset Filters -->
+            <button class="btn btn-outline btn-full" onclick="resetAllFilters()">CLEAR ALL FILTERS</button>
+          </aside>
+
+          <!-- MAIN PRODUCT CATALOG GRID -->
+          <div class="catalog-content">
+            <div class="product-grid" id="mainProductGrid">
+              <!-- Dynamically Populated 52+ Products -->
+            </div>
+            
+            <div id="noProductsFound" class="no-products-box hidden">
+              <i class="fa-solid fa-sparkles"></i>
+              <h3>NO PRODUCTS FOUND</h3>
+              <p>Try adjusting your search query or reset filters to explore our full beauty range.</p>
+              <button class="btn btn-primary" onclick="resetAllFilters()">CLEAR SEARCH & FILTERS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW ARRIVALS -->
+    <section class="new-arrivals-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">NEW ARRIVALS</h2>
+          <p class="section-subtitle">Meet the newest additions to your glowing beauty routine.</p>
+        </div>
+        <div class="product-grid" id="newArrivalsGrid">
+          <!-- JavaScript dynamic population -->
+        </div>
+      </div>
+    </section>
+
+    <!-- BEAUTY BUNDLES SECTION -->
+    <section class="bundles-section" id="bundles">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">COMPLETE YOUR ROUTINE</h2>
+          <p class="section-subtitle">Curated sets designed to work together for maximum glow.</p>
+        </div>
+        <div class="bundles-grid">
+          <div class="bundle-card">
+            <div class="bundle-img">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="The Daily Glow Set">
+            </div>
+            <div class="bundle-info">
+              <h3>THE DAILY GLOW SET</h3>
+              <p class="bundle-items">Cleanser + Serum + Moisturizer + SPF 50</p>
+              <div class="bundle-pricing">
+                <span class="price-current">₱2,899</span>
+                <span class="price-old">₱3,396</span>
+                <span class="bundle-save">Save ₱497</span>
+              </div>
+              <button class="btn btn-primary btn-full" onclick="addBundleToCart('THE DAILY GLOW SET', 2899)">SHOP BUNDLE</button>
+            </div>
+          </div>
+
+          <div class="bundle-card">
+            <div class="bundle-img">
+              <img src="https://images.unsplash.com/photo-1608248597261-833244679261?auto=format&fit=crop&w=800&q=80" alt="The Hydration Set">
+            </div>
+            <div class="bundle-info">
+              <h3>THE HYDRATION SET</h3>
+              <p class="bundle-items">Rose Toner + Hyaluronic Serum + Barrier Cream</p>
+              <div class="bundle-pricing">
+                <span class="price-current">₱2,199</span>
+                <span class="price-old">₱2,597</span>
+                <span class="bundle-save">Save ₱398</span>
+              </div>
+              <button class="btn btn-primary btn-full" onclick="addBundleToCart('THE HYDRATION SET', 2199)">SHOP BUNDLE</button>
+            </div>
+          </div>
+
+          <div class="bundle-card">
+            <div class="bundle-img">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="The Self-Care Set">
+            </div>
+            <div class="bundle-info">
+              <h3>THE SELF-CARE SET</h3>
+              <p class="bundle-items">Vanilla Body Scrub + Body Lotion + Hand Cream</p>
+              <div class="bundle-pricing">
+                <span class="price-current">₱1,499</span>
+                <span class="price-old">₱1,797</span>
+                <span class="bundle-save">Save ₱298</span>
+              </div>
+              <button class="btn btn-primary btn-full" onclick="addBundleToCart('THE SELF-CARE SET', 1499)">SHOP BUNDLE</button>
+            </div>
+          </div>
+
+          <div class="bundle-card">
+            <div class="bundle-img">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80" alt="The Beauty Starter">
+            </div>
+            <div class="bundle-info">
+              <h3>THE BEAUTY STARTER</h3>
+              <p class="bundle-items">Cleanser + Essence Toner + Lip Balm + Sun Gel</p>
+              <div class="bundle-pricing">
+                <span class="price-current">₱1,899</span>
+                <span class="price-old">₱2,246</span>
+                <span class="bundle-save">Save ₱347</span>
+              </div>
+              <button class="btn btn-primary btn-full" onclick="addBundleToCart('THE BEAUTY STARTER', 1899)">SHOP BUNDLE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEAUTY QUIZ SECTION -->
+    <section class="quiz-section" id="quiz">
+      <div class="container">
+        <div class="quiz-card-wrapper">
+          <div class="section-header">
+            <h2 class="section-title">FIND YOUR PERFECT ROUTINE</h2>
+            <p class="section-subtitle">Take our 10-second skincare quiz to unlock custom formulation recommendations.</p>
+          </div>
+          
+          <form id="beautyQuizForm" onsubmit="handleQuizSubmit(event)">
+            <div class="quiz-step" id="quizStep1">
+              <h3>Step 1: What is your skin type?</h3>
+              <div class="quiz-options-grid">
+                <label class="quiz-option">
+                  <input type="radio" name="quizSkinType" value="Dry" required />
+                  <span>Dry</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="quizSkinType" value="Oily" />
+                  <span>Oily</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="quizSkinType" value="Combination" />
+                  <span>Combination</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="quizSkinType" value="Normal" />
+                  <span>Normal</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="quizSkinType" value="Sensitive" />
+                  <span>Sensitive</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-step" id="quizStep2" style="margin-top: 2rem;">
+              <h3>Step 2: What is your main skin concern?</h3>
+              <div class="quiz-options-grid">
+                <label class="quiz-option">
+                  <input type="radio" name="quizConcern" value="Dryness" required />
+                  <span>Dryness</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="quizConcern" value="Dullness" />
+                  <span>Dullness</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="quizConcern" value="Acne-Prone" />
+                  <span>Acne-Prone</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="quizConcern" value="Uneven Tone" />
+                  <span>Uneven Tone</span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="quizConcern" value="Fine Lines" />
+                  <span>Fine Lines</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-action" style="margin-top: 2.5rem; text-align: center;">
+              <button type="submit" class="btn btn-primary">REVEAL MY ROUTINE</button>
+            </div>
+          </form>
+
+          <!-- Quiz Results Box -->
+          <div id="quizResultsBox" class="quiz-results hidden">
+            <h3 class="quiz-results-title">YOUR PERSONALIZED PICKS</h3>
+            <p id="quizMatchDesc">Based on your selections, here are your best match products:</p>
+            <div class="product-grid" id="quizRecommendationsGrid" style="margin-top: 1.5rem;">
+              <!-- Javascript populates 3 items -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL BEAUTY NOTES -->
+    <section class="notes-section" id="notes">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">BEAUTY NOTES</h2>
+          <p class="section-subtitle">Skincare wisdom, routine guides, and editorial self-care advice.</p>
+        </div>
+        <div class="notes-grid">
+          <article class="note-card">
+            <div class="note-img">
+              <img src="https://images.unsplash.com/photo-1556228722-d119f829c33b?auto=format&fit=crop&w=600&q=80" alt="Skincare Routine">
+            </div>
+            <div class="note-content">
+              <h3>How to Build a Simple Skincare Routine</h3>
+              <p>Mastering the basics: why consistency in cleansing, hydrating, and sun protection triumphs over complex 10-step rituals.</p>
+              <a href="#" class="note-read-more" onclick="event.preventDefault(); showToast('Full article coming soon to Lumea Journal!')">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="note-card">
+            <div class="note-img">
+              <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80" alt="Sunscreen Daily Use">
+            </div>
+            <div class="note-content">
+              <h3>Why Sunscreen Should Be Your Everyday Essential</h3>
+              <p>Uncovering the science of broad-spectrum SPF: how daily UV shield guards collagen, wards off spot damage, and maintains elasticity.</p>
+              <a href="#" class="note-read-more" onclick="event.preventDefault(); showToast('Full article coming soon to Lumea Journal!')">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="note-card">
+            <div class="note-img">
+              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80" alt="Layering Skincare">
+            </div>
+            <div class="note-content">
+              <h3>How to Layer Your Skincare Products</h3>
+              <p>Thin to thick rule explained. Maximize active ingredient penetration by layering essences, serums, creams, and oils in proper sequence.</p>
+              <a href="#" class="note-read-more" onclick="event.preventDefault(); showToast('Full article coming soon to Lumea Journal!')">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="note-card">
+            <div class="note-img">
+              <img src="https://images.unsplash.com/photo-1512290900673-70020120536d?auto=format&fit=crop&w=600&q=80" alt="Self Care Habits">
+            </div>
+            <div class="note-content">
+              <h3>Simple Self-Care Habits for Healthier-Looking Skin</h3>
+              <p>From quality REM sleep to proper hydration, discover how small everyday lifestyle choices reflect directly on your glow.</p>
+              <a href="#" class="note-read-more" onclick="event.preventDefault(); showToast('Full article coming soon to Lumea Journal!')">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">LOVED BY OUR BEAUTY COMMUNITY</h2>
+          <p class="section-subtitle">Real feedback from radiant Luméa customers.</p>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The Vitamin C Serum completely transformed my dull skin in two weeks! I love the glass bottle packaging and soft rose hint."</p>
+            <div class="reviewer-meta">
+              <strong>Sophia M.</strong>
+              <span><i class="fa-solid fa-circle-check"></i> Verified Purchase</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Hands down the best lightweight sunscreen I've ever used. Zero white cast under my makeup and leaves a dewy glow!"</p>
+            <div class="reviewer-meta">
+              <strong>Bea R.</strong>
+              <span><i class="fa-solid fa-circle-check"></i> Verified Purchase</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The Rose Water Toner feels like a refreshing mist on hot Manila days. Super soothing and hydrating for my sensitive skin."</p>
+            <div class="reviewer-meta">
+              <strong>Camille L.</strong>
+              <span><i class="fa-solid fa-circle-check"></i> Verified Purchase</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Ordered the Glow Starter Bundle and I am so obsessed! Fast delivery in Makati and exquisite packaging."</p>
+            <div class="reviewer-meta">
+              <strong>Patricia K.</strong>
+              <span><i class="fa-solid fa-circle-check"></i> Verified Purchase</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Retinol Night Serum is so gentle. No peeling or redness, just plump, bouncy skin every single morning."</p>
+            <div class="reviewer-meta">
+              <strong>Elena D.</strong>
+              <span><i class="fa-solid fa-circle-check"></i> Verified Purchase</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The Velvet Skin Foundation blends like a dream. Perfectly matches my Asian warm undertone and lasts all day!"</p>
+            <div class="reviewer-meta">
+              <strong>Chloe T.</strong>
+              <span><i class="fa-solid fa-circle-check"></i> Verified Purchase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM COMMUNITY -->
+    <section class="instagram-section">
+      <div class="container text-center">
+        <h2 class="section-title">FOLLOW THE GLOW</h2>
+        <p class="insta-handle">@lumeabeauty</p>
+        <div class="insta-grid">
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80" alt="Instagram Post">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=500&q=80" alt="Instagram Post">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=500&q=80" alt="Instagram Post">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80" alt="Instagram Post">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1567928269937-ae146e45b428?auto=format&fit=crop&w=500&q=80" alt="Instagram Post">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+          <div class="insta-item">
+            <img src="https://images.unsplash.com/photo-1608248597261-833244679261?auto=format&fit=crop&w=500&q=80" alt="Instagram Post">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter-section">
+      <div class="container text-center">
+        <h2 class="section-title">JOIN THE GLOW CLUB</h2>
+        <p class="newsletter-desc">Get beauty tips, new arrivals, exclusive offers, and skincare inspiration directly in your inbox.</p>
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+          <input type="email" placeholder="Your email address" required id="newsletterEmailInput" />
+          <button type="submit" class="btn btn-dark">SUBSCRIBE</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-title">LUMÉA</span>
+          <span class="logo-sub">BEAUTY & SKINCARE</span>
+        </a>
+        <p>"Beauty essentials for your everyday glow."</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>SHOP</h4>
+        <ul>
+          <li><a href="#shop" onclick="filterByCategory('Skincare')">Skincare</a></li>
+          <li><a href="#shop" onclick="filterByCategory('Makeup')">Makeup</a></li>
+          <li><a href="#shop" onclick="filterByCategory('Body Care')">Body Care</a></li>
+          <li><a href="#shop" onclick="filterByCategory('Hair Care')">Hair Care</a></li>
+          <li><a href="#shop" onclick="filterByCategory('Beauty Tools')">Beauty Tools</a></li>
+          <li><a href="#shop" onclick="filterByCategory('Gift Sets')">Gift Sets</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>HELP</h4>
+        <ul>
+          <li><a href="#" onclick="event.preventDefault(); showToast('Support line available 9am-6pm PST')">Contact Us</a></li>
+          <li><a href="#" onclick="event.preventDefault(); showToast('Free shipping nationwide over ₱1,500')">Delivery Info</a></li>
+          <li><a href="#" onclick="event.preventDefault(); showToast('Track your order status via email code')">Order Tracking</a></li>
+          <li><a href="#" onclick="event.preventDefault(); showToast('FAQ section loaded')">FAQs</a></li>
+          <li><a href="#" onclick="event.preventDefault(); showToast('Easy 30-day return policy')">Returns & Exchange</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>ABOUT</h4>
+        <ul>
+          <li><a href="#notes">Our Story</a></li>
+          <li><a href="#notes">Beauty Notes</a></li>
+          <li><a href="#" onclick="event.preventDefault(); showToast('Luméa respects your data privacy.')">Privacy Policy</a></li>
+          <li><a href="#" onclick="event.preventDefault(); showToast('Terms of Service active.')">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>&copy; 2026 LUMÉA BEAUTY. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="modal-overlay" id="productModal">
+    <div class="product-modal-container">
+      <button class="close-btn modal-close" id="closeProductModalBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="product-modal-body" id="productModalContent">
+        <!-- Javascript dynamically populates modal content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOPPING CART DRAWER -->
+  <div class="drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h3>YOUR BEAUTY BAG (<span id="cartDrawerCount">0</span>)</h3>
+      <button class="close-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-drawer-body" id="cartItemsContainer">
+      <!-- Dynamic Cart Items -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">₱0</strong>
+      </div>
+      <div class="cart-summary-line">
+        <span>Shipping</span>
+        <span id="cartShippingText">Calculated at checkout</span>
+      </div>
+      <div class="cart-summary-line total-line">
+        <span>Total</span>
+        <strong id="cartTotal">₱0</strong>
+      </div>
+      <button class="btn btn-primary btn-full" id="proceedCheckoutBtn">CHECKOUT</button>
+      <button class="btn btn-outline btn-full" id="continueShoppingBtn">CONTINUE SHOPPING</button>
+    </div>
+  </aside>
+
+  <!-- WISHLIST DRAWER -->
+  <div class="drawer-overlay" id="wishlistOverlay"></div>
+  <aside class="cart-drawer" id="wishlistDrawer">
+    <div class="drawer-header">
+      <h3>YOUR WISHLIST (<span id="wishlistDrawerCount">0</span>)</h3>
+      <button class="close-btn" id="closeWishlistBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-drawer-body" id="wishlistItemsContainer">
+      <!-- Dynamic Wishlist Items -->
+    </div>
+  </aside>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="checkout-modal-container">
+      <button class="close-btn modal-close" id="closeCheckoutModalBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="checkout-header">
+        <h2>COMPLETE YOUR ORDER</h2>
+        <p>Enter your information for delivery in the Philippines.</p>
+      </div>
+      <form class="checkout-form" id="checkoutForm" onsubmit="handlePlaceOrder(event)">
+        <div class="form-section">
+          <h4>CUSTOMER INFORMATION</h4>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="checkoutName">Full Name *</label>
+              <input type="text" id="checkoutName" required placeholder="e.g. Maria Santos" />
+            </div>
+            <div class="form-group">
+              <label for="checkoutEmail">Email Address *</label>
+              <input type="email" id="checkoutEmail" required placeholder="maria@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="checkoutPhone">Phone Number *</label>
+              <input type="tel" id="checkoutPhone" required placeholder="09171234567" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h4>DELIVERY INFORMATION</h4>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="checkoutAddress">House / Street / Unit *</label>
+              <input type="text" id="checkoutAddress" required placeholder="123 Glow Street, Unit 4B" />
+            </div>
+            <div class="form-group">
+              <label for="checkoutBarangay">Barangay *</label>
+              <input type="text" id="checkoutBarangay" required placeholder="Poblacion" />
+            </div>
+            <div class="form-group">
+              <label for="checkoutCity">City / Municipality *</label>
+              <input type="text" id="checkoutCity" required placeholder="Makati City" />
+            </div>
+            <div class="form-group">
+              <label for="checkoutProvince">Province *</label>
+              <input type="text" id="checkoutProvince" required placeholder="Metro Manila" />
+            </div>
+            <div class="form-group">
+              <label for="checkoutZip">Postal Code *</label>
+              <input type="text" id="checkoutZip" required placeholder="1200" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h4>PAYMENT METHOD</h4>
+          <div class="payment-methods">
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="Cash on Delivery" checked />
+              <span>Cash on Delivery (COD)</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="GCash" />
+              <span>GCash</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="Bank Transfer" />
+              <span>Bank Transfer</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="Credit/Debit Card" />
+              <span>Credit / Debit Card</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="checkout-order-summary">
+          <div class="cart-summary-line">
+            <span>Order Subtotal</span>
+            <span id="checkoutSubtotal">₱0</span>
+          </div>
+          <div class="cart-summary-line">
+            <span>Shipping</span>
+            <span id="checkoutShipping">₱150</span>
+          </div>
+          <div class="cart-summary-line total-line">
+            <span>Order Total</span>
+            <strong id="checkoutTotal">₱0</strong>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full" style="margin-top: 1.5rem;">PLACE ORDER NOW</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS MODAL -->
+  <div class="modal-overlay" id="successModal">
+    <div class="success-modal-container text-center">
+      <div class="success-icon-wrap">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h2>YOUR BEAUTY ORDER IS CONFIRMED!</h2>
+      <p class="success-msg">Thank you for choosing LUMÉA. Your beauty essentials are being prepared with care.</p>
+      
+      <div class="order-details-box" id="orderSuccessDetails">
+        <!-- JavaScript populates summary -->
+      </div>
+
+      <button class="btn btn-primary" onclick="closeSuccessModal()">CONTINUE SHOPPING</button>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATIONS -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
